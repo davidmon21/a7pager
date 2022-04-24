@@ -1,0 +1,94 @@
+@font-face {
+    font-family: "munro";
+    src: url("munro.ttf");
+  }
+#navbar {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: #290025;
+    border-radius: 1vw;
+    font-size: 2vh;
+}
+
+#bottomnavbar {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    background-color: #290025;
+    border-radius: 1vw;
+    font-size: 2vh;
+}
+
+nav ul {
+    margin: 0px;
+    font-size: 2vh;
+    padding: 1vw 0vw 1vw 1vw;
+}
+
+nav li {
+    margin-right: 20px;
+    font-size: 2vh;
+    display: inline;
+}
+
+a:link {
+    color: #fd00f0;
+}
+
+a:visited {
+    color: #fd00f0;
+}
+
+a:active {
+    color: #b403ab;
+}
+
+a:hover {
+    color: #b403ab;
+}
+
+h2 {
+    color: #fd00f0;
+}
+
+body {
+    background: #11001C;
+    margin: 4% 5% 2% 5%;
+    font-family: 'munro';
+}
+
+article {
+    background-color: #11001C;
+    color: #970088;
+    margin: 5% 5% 5% 5%;
+    padding: 5px 5px 5px 5px;
+    border-width: 10px;
+    border-style: dashed;
+    border-radius: 10px;
+    border-color: #290025;
+    font-family: 'munro';
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #290025;
+    min-width: 160px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    margin: 0px;
+    padding: 5px 0px 5px 0px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

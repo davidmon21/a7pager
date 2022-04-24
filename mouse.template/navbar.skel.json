@@ -1,0 +1,10 @@
+{
+    "opening": "<center> <ul>",
+    "item": "<li><a href={{link}}>{{title}}</a></li>",
+    "dropdown": { 
+        "parent": "<li><div class=\"dropdown\"><a href=\"#\">{{title}}</a><div class=\"dropdown-content\">",
+        "child": "<span><p><a href={{link}}>{{title}}</a></p></span>",
+        "close": "</div>"
+    },
+    "closing": "</ul></center>"
+}

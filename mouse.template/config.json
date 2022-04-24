@@ -1,0 +1,6 @@
+{
+    "special_variables": ["site_title","navbar"],
+    "variables": ["page_title", "title", "content", "extra", "navbar", "content"],
+    "variables_files": {"content":"content.skel.html","navbar":"navbar.skel.json"},
+    "content": {"variables":["text", "title", "link"], "defaults": {"link":"content", "text":"","title":""}}
+}

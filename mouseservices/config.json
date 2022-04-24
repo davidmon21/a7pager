@@ -1,0 +1,18 @@
+{
+    "site_title": "a7'th Layer",
+    "article_page": "speg.html",
+    "template": "mouse.template",
+    "navbar":[
+                ["index.html","a7'th layer"], 
+                ["speg.html","spaghetti"], 
+                [ "fragments", [
+                    ["ident.html","identity"], 
+                    ["index.html","resonance"]
+                ] ]
+                ,
+                ["index.html", "fear"],
+                ["love",[
+                    ["seethem.html","see them"]
+                ]
+            ]]
+}
