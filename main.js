@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { type } = require('os');
 var template_path = "../mouse.template/"
 function navbar_builder(navbar, links){
     var navbar = JSON.parse(fs.readFileSync(navbar))
@@ -18,6 +19,7 @@ function navbar_builder(navbar, links){
 }
 
 function template_processor(template,variables,template_config,site_config){
+    var text = ""
     for(let i in variables){
         if(variables[i] == "navbar"){
             var navstring = navbar_builder(template_path+template_config.variables_files.navbar, site_config.navbar)
@@ -46,33 +48,17 @@ var pages = fs.readdirSync("./pages")
 
 var template = template_processor(fs.readFileSync('../mouse.template/main.skel.html').toString(), template_config.special_variables,template_config,site_config)
 
-
-var navbar_json = "../mouse.template/navbar.skel.json"
 var template_copy = undefined
+fs.mkdirSync("./compiled");
 for( let i in pages){
     template_copy = template
-    template_copy = template_processor(template_copy, template_config.variables,template_config,JSON.parse(fs.readFileSync("./pages/"+pages[i])))
-    console.log(template_copy)
+    config_json = JSON.parse(fs.readFileSync("./pages/"+pages[i]))
+    template_copy = template_processor(template_copy, template_config.variables,template_config,config_json)
+    fs.writeFileSync("./compiled/"+config_json.file_name,template_copy)
 }
 
-// navstring = navbar_builder(navbar_json,config.navbar)
+// var articles_json=site_config.articles
 
-
-// template=template.replace("{{navbar}}",navstring)
-
-// template=template.replace("{{site_title}}", config.title)
-
-// for(let i in pages){
-//     page_config=JSON.parse(fs.readFileSync("./pages/"+pages[i]))
-//     template_copy = template
-//     for(let j in template_config.variables){
-//         if(page_config.hasOwnProperty(template_config.variables[i])){
-//             console.log(page_config.page_title)
-//             template_copy = template_copy.replace("{{page_title}}", page_config.page_title)
-//         }
-//         else{
-//             template_copy = template_copy.replace("{{page_title}}","")
-//         }
-//     }
-//     console.log(template_copy)
+// for(let i in articles_json.content){
+//     template_processor(template_path+articles_json, template_config.variables,template_config,config_json)
 // }

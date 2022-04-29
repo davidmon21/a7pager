@@ -1,7 +1,12 @@
 {
     "site_title": "a7'th Layer",
-    "article_page": "speg.html",
     "template": "mouse.template",
+    "articles": {
+        "page_title": "Thoughts and Delusions",
+        "file_name": "speg.html",
+        "content": ["moon_is_a_harshmistress.article.json","neuromancer.article.json","snowcrash.article.json"],
+        "template": "content.skel.html"
+    },
     "navbar":[
                 ["index.html","a7'th layer"], 
                 ["speg.html","spaghetti"], 
